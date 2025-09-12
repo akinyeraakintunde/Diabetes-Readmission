@@ -59,6 +59,50 @@ This project is built using **Python 3.11** and the following libraries:
 
 Clone this repository:
 
-```bash
-git clone https://github.com/yourusername/global-talent-data-project.git
-cd global-talent-data-project
+## Create a virtual environment (recommended):
+python -m venv venv
+source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate     # Windows
+
+
+## Install dependencies:
+pip install -r requirements.txt
+
+
+##Usage
+Open notebooks/Global_Talent_Project.ipynb in Jupyter Notebook or VS Code and run the cells sequentially.
+The notebook includes:
+Data cleaning & preprocessing
+Exploratory data analysis (visualizations & insights)
+Model building & evaluation
+Results & recommendations
+
+## Project Structure
+global-talent-data-project/
+├── notebooks/
+│   └── Global_Talent_Project.ipynb
+├── data/
+│   └── dataset.csv
+├── scripts/
+│   ├── data_cleaning.py
+│   ├── eda.py
+│   └── model_training.py
+├── requirements.txt
+├── LICENSE
+└── README.md
+
+##Results
+The project demonstrates:
+Data trends and correlations
+Model performance with metrics like accuracy, precision, recall, F1-score
+Visualizations that communicate actionable insights
+A clean, reproducible workflow ready for professional review
+
+##License
+This project is licensed under the MIT License.
+
+##Contact
+ibrahim Akintunde Akinyera
+Email: akinyeraakintunde@gmail.com
+This project is part of my portfolio for the Global Talent Visa, showcasing my expertise in data analysis, machine learning, and Python development.
+
