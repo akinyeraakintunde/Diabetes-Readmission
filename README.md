@@ -32,10 +32,11 @@ The goal of this project is to:
 5. Demonstrate reproducible and professional data science workflows.
 
 ## Dataset
+- Source: [Diabetes Healthcare Dataset (Kaggle)](https://www.kaggle.com/datasets/uciml/diabetes-healthcare-dataset)
+- Records: 101,766
+- Features: 50+
+- Target: `readmitted` (<30 days, >30 days, No)
 
-The project uses the **Diabetes Healthcare Dataset** from Kaggle:
-
-- [Diabetes Healthcare Dataset](https://www.kaggle.com/datasets/uciml/diabetes-healthcare-dataset)
 
 **Key Features:**
 
@@ -102,13 +103,21 @@ diabetes-readmission-project/
 ├── LICENSE
 └── README.md
 ```
-## Results
-The project demonstrates:
-```bash
-Patient readmission trends and correlations
-Predictive model performance with metrics such as accuracy, precision, recall, and F1-score
-Clear visualizations that communicate actionable healthcare insights
-A reproducible workflow ready for professional review
+
+## Results & Insights
+ ```bash 
+- Random Forest model achieved the best accuracy and F1-score.
+- Patients with multiple prior visits are more likely to be readmitted.
+- Age groups and admission types are strong predictors.
+- Insights can support hospital resource allocation and patient care strategies.
+ ```
+
+## Results & Insights
+ ```bash 
+- Random Forest model achieved the best accuracy and F1-score.
+- Patients with multiple prior visits are more likely to be readmitted.
+- Age groups and admission types are strong predictors.
+- Insights can support hospital resource allocation and patient care strategies.
 ```
 ## License
 This project is licensed under the MIT License.
