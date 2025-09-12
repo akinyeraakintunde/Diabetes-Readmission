@@ -1,0 +1,104 @@
+# =========================
+# Personal Project
+# Author: Ibrahim Akinyera
+# Date: 2025-09-12
+# Description: Random Forest classification with preprocessing and SHAP for feature importance
+# =========================
+
+# Imports
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.ensemble import RandomForestClassifier
+from imblearn.over_sampling import SMOTE
+import shap
+import warnings
+
+# Suppress warnings for cleaner output
+warnings.filterwarnings("ignore", category=FutureWarning)
+
+# =========================
+# Load your data
+# =========================
+# Example: df = pd.read_csv("your_dataset.csv")
+# Ensure 'target' is your label column
+# df = pd.read_csv("your_dataset.csv")
+# target = 'diabetesMed'  # Example target column
+
+
+# Separate features and target
+# =========================
+X = df.drop(columns=['target'])
+y = df['target']
+
+# Identify numeric and categorical columns
+numeric_cols = X.select_dtypes(include=['int64', 'float64']).columns.tolist()
+categorical_cols = X.select_dtypes(include=['object', 'category']).columns.tolist()
+
+# Convert all categorical columns to string to prevent mixed types error
+for col in categorical_cols:
+    X[col] = X[col].astype(str)
+
+# =========================
+# Split into train/test
+# =========================
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42, stratify=y
+)
+
+# =========================
+# Preprocessing pipeline
+# =========================
+numeric_transformer = StandardScaler()
+categorical_transformer = OneHotEncoder(handle_unknown='ignore', sparse_output=False)
+
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', numeric_transformer, numeric_cols),
+        ('cat', categorical_transformer, categorical_cols)
+    ]
+)
+
+# =========================
+# Apply SMOTE
+# =========================
+# Fit preprocessing first
+X_train_processed = preprocessor.fit_transform(X_train)
+X_test_processed = preprocessor.transform(X_test)
+
+# Apply SMOTE on the processed training data
+smote = SMOTE(random_state=42)
+X_train_res, y_train_res = smote.fit_resample(X_train_processed, y_train)
+
+# =========================
+# Train Random Forest Classifier
+# =========================
+rf = RandomForestClassifier(
+    n_estimators=200, 
+    max_depth=10, 
+    random_state=42
+)
+rf.fit(X_train_res, y_train_res)
+
+# Evaluate
+accuracy = rf.score(X_test_processed, y_test)
+print(f"Test Accuracy: {accuracy:.4f}")
+
+# =========================
+# SHAP for Feature Importance
+# =========================
+# Get feature names after preprocessing
+encoded_cat_features = preprocessor.named_transformers_['cat'].get_feature_names_out(categorical_cols)
+feature_names = numeric_cols + list(encoded_cat_features)
+
+# Convert processed training data to DataFrame for SHAP
+X_train_shap = pd.DataFrame(X_train_processed, columns=feature_names)
+
+explainer = shap.TreeExplainer(rf)
+shap_values = explainer.shap_values(X_train_shap)
+
+# Plot summary
+shap.summary_plot(shap_values, X_train_shap, show=True)
