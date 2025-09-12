@@ -1,13 +1,13 @@
-# Ibrahim Akinyera Data Analysis Project
+# Diabetes Readmission Prediction Project
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python Version](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
 
 ## Overview
 
-This project demonstrates my proficiency in **data analysis, machine learning, and Python programming** through a practical dataset. It is part of my portfolio for the **Global Talent Visa** application, showcasing technical skills, problem-solving, and the ability to deliver a full data-driven solution.
+This project demonstrates **data analysis, machine learning, and Python programming skills** through a healthcare dataset. It is part of my portfolio for the **Global Talent Visa**, showcasing my ability to solve real-world problems using data-driven insights.
 
-The project is fully reproducible, with zero extra setup required, and is tailored to run on **Kaggle** or any local Python environment.
+The project is fully reproducible and designed to run on **Kaggle** or any local Python environment with zero extra setup.
 
 ## Table of Contents
 
@@ -27,62 +27,73 @@ The goal of this project is to:
 
 1. Explore and clean the dataset.  
 2. Perform exploratory data analysis (EDA).  
-3. Build predictive machine learning models.  
-4. Evaluate model performance and present actionable insights.  
-5. Demonstrate best practices in reproducible data science workflows.
+3. Build predictive models to identify patients at risk of readmission.  
+4. Evaluate model performance and provide actionable insights.  
+5. Demonstrate reproducible and professional data science workflows.
 
 ## Dataset
 
-The project uses a **Kaggle dataset**:
+The project uses the **Diabetes Healthcare Dataset** from Kaggle:
 
-- [Dataset Name & Link](#)  
+- [Diabetes Healthcare Dataset](https://www.kaggle.com/datasets/uciml/diabetes-healthcare-dataset)
 
-Key features:
+**Key Features:**
 
-- Number of rows: `X`  
-- Number of columns: `Y`  
-- Target variable: `Z`  
+- **Rows:** 101,766  
+- **Columns:** 50+  
+- **Target Variable:** `readmitted` (e.g., <30 days, >30 days, or no readmission)
 
-> The dataset is clean and well-structured, allowing for comprehensive analysis and model building.
+**Applications:**
+
+- Predict patient readmission using machine learning models  
+- Perform exploratory data analysis to identify trends in healthcare data  
+- Visualize insights for data-driven decision making  
 
 ## Technologies & Libraries
 
-This project is built using **Python 3.11** and the following libraries:
+This project is built with **Python 3.11** and uses the following libraries:
 
 - `pandas` – data manipulation  
 - `numpy` – numerical computations  
 - `matplotlib` & `seaborn` – data visualization  
 - `scikit-learn` – machine learning models  
-- `jupyter` – interactive coding environment  
+- `jupyter` – interactive notebooks  
 
 ## Installation
 
-Clone this repository:
+Clone the repository:
 
-## Create a virtual environment (recommended):
+```bash
+git clone https://github.com/yourusername/diabetes-readmission-project.git
+cd diabetes-readmission-project
+```
+## Installation
+Create a virtual environment:
+```bash
 python -m venv venv
 source venv/bin/activate  # Mac/Linux
 venv\Scripts\activate     # Windows
-
-
-## Install dependencies:
+```
+##Install dependencies:
+```bash
 pip install -r requirements.txt
-
-
+```
 ##Usage
-Open notebooks/Global_Talent_Project.ipynb in Jupyter Notebook or VS Code and run the cells sequentially.
+Open the notebook notebooks/Diabetes_Readmission_Analysis.ipynb in Jupyter Notebook or VS Code and run cells sequentially.
 The notebook includes:
-Data cleaning & preprocessing
-Exploratory data analysis (visualizations & insights)
-Model building & evaluation
-Results & recommendations
+Data cleaning and preprocessing
+Exploratory data analysis (EDA)
+Predictive model building and evaluation
+Visualizations and actionable insights
 
-## Project Structure
-global-talent-data-project/
+##Project Structure
+```bash
+
+diabetes-readmission-project/
 ├── notebooks/
-│   └── Global_Talent_Project.ipynb
+│   └── Diabetes_Readmission_Analysis.ipynb
 ├── data/
-│   └── dataset.csv
+│   └── diabetes_data.csv
 ├── scripts/
 │   ├── data_cleaning.py
 │   ├── eda.py
@@ -90,19 +101,24 @@ global-talent-data-project/
 ├── requirements.txt
 ├── LICENSE
 └── README.md
-
-##Results
+```
+## Results
 The project demonstrates:
-Data trends and correlations
-Model performance with metrics like accuracy, precision, recall, F1-score
-Visualizations that communicate actionable insights
-A clean, reproducible workflow ready for professional review
-
-##License
+```bash
+Patient readmission trends and correlations
+Predictive model performance with metrics such as accuracy, precision, recall, and F1-score
+Clear visualizations that communicate actionable healthcare insights
+A reproducible workflow ready for professional review
+```
+## License
 This project is licensed under the MIT License.
 
-##Contact
-ibrahim Akintunde Akinyera
+## Contact
+Ibrahim Akintunde Akinyera 
 Email: akinyeraakintunde@gmail.com
-This project is part of my portfolio for the Global Talent Visa, showcasing my expertise in data analysis, machine learning, and Python development.
+
+
+---
+
+
 
