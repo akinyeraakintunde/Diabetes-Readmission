@@ -2,7 +2,6 @@ Predictive Modeling of Hospital Readmission Risk in Diabetic Patients
 
 This project leverages machine learning to predict the risk of hospital readmission within 30 days for diabetic patients. By analyzing patient demographics, medical history, and treatment data, the model aims to identify high-risk individuals, enabling healthcare providers to implement timely interventions and improve patient outcomes.
 
-⸻
 
 Technologies Used
 
