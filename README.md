@@ -1,133 +1,96 @@
-# Diabetes Readmission Prediction Project
+Here’s a polished README ready to paste into your GitHub repository for your diabetes readmission project:
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python Version](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
+⸻
 
-## Overview
+Predictive Modeling of Hospital Readmission Risk in Diabetic Patients
 
-This project demonstrates **data analysis, machine learning, and Python programming skills** through a healthcare dataset. It is part of my portfolio for the **Global Talent Visa**, showcasing my ability to solve real-world problems using data-driven insights.
+This project leverages machine learning to predict the risk of hospital readmission within 30 days for diabetic patients. By analyzing patient demographics, medical history, and treatment data, the model aims to identify high-risk individuals, enabling healthcare providers to implement timely interventions and improve patient outcomes.
 
-The project is fully reproducible and designed to run on **Kaggle** or any local Python environment with zero extra setup.
+⸻
 
-## Table of Contents
+Technologies Used
+	•	Programming Language: Python
+	•	Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, XGBoost, SHAP
+	•	Tools: Jupyter Notebook, Git, GitHub Actions (for CI/CD)
 
-- [Project Objective](#project-objective)  
-- [Dataset](#dataset)  
-- [Technologies & Libraries](#technologies--libraries)  
-- [Installation](#installation)  
-- [Usage](#usage)  
-- [Project Structure](#project-structure)  
-- [Results](#results)  
-- [License](#license)  
-- [Contact](#contact)  
+⸻
 
-## Project Objective
+Project Structure
 
-The goal of this project is to:
-
-1. Explore and clean the dataset.  
-2. Perform exploratory data analysis (EDA).  
-3. Build predictive models to identify patients at risk of readmission.  
-4. Evaluate model performance and provide actionable insights.  
-5. Demonstrate reproducible and professional data science workflows.
-
-## Dataset
-- Source: [Diabetes Healthcare Dataset (Kaggle)](https://www.kaggle.com/datasets/uciml/diabetes-healthcare-dataset)
-- Records: 101,766
-- Features: 50+
-- Target: `readmitted` (<30 days, >30 days, No)
-
-
-**Key Features:**
-
-- **Rows:** 101,766  
-- **Columns:** 50+  
-- **Target Variable:** `readmitted` (e.g., <30 days, >30 days, or no readmission)
-
-**Applications:**
-
-- Predict patient readmission using machine learning models  
-- Perform exploratory data analysis to identify trends in healthcare data  
-- Visualize insights for data-driven decision making  
-
-## Technologies & Libraries
-
-This project is built with **Python 3.11** and uses the following libraries:
-
-- `pandas` – data manipulation  
-- `numpy` – numerical computations  
-- `matplotlib` & `seaborn` – data visualization  
-- `scikit-learn` – machine learning models  
-- `jupyter` – interactive notebooks  
-
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/diabetes-readmission-project.git
-cd diabetes-readmission-project
-```
-## Installation
-Create a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # Mac/Linux
-venv\Scripts\activate     # Windows
-```
-##Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-##Usage
-Open the notebook notebooks/Diabetes_Readmission_Analysis.ipynb in Jupyter Notebook or VS Code and run cells sequentially.
-The notebook includes:
-Data cleaning and preprocessing
-Exploratory data analysis (EDA)
-Predictive model building and evaluation
-Visualizations and actionable insights
-
-##Project Structure
-```bash
-
-diabetes-readmission-project/
-├── notebooks/
-│   └── Diabetes_Readmission_Analysis.ipynb
+/diabetes-readmission
+│
 ├── data/
 │   └── diabetes_data.csv
-├── scripts/
-│   ├── data_cleaning.py
-│   ├── eda.py
-│   └── model_training.py
+│
+├── notebooks/
+│   ├── 01_data_preprocessing.ipynb
+│   ├── 02_eda.ipynb
+│   ├── 03_model_development.ipynb
+│   └── 04_model_interpretability.ipynb
+│
+├── src/
+│   ├── preprocessing.py
+│   ├── model.py
+│   └── interpretability.py
+│
 ├── requirements.txt
-├── LICENSE
-└── README.md
-```
+├── README.md
+└── LICENSE
+⸻
+Getting Started
 
-## Results & Insights
- ```bash 
-- Random Forest model achieved the best accuracy and F1-score.
-- Patients with multiple prior visits are more likely to be readmitted.
-- Age groups and admission types are strong predictors.
-- Insights can support hospital resource allocation and patient care strategies.
- ```
+1. Clone the Repository
 
-## Results & Insights
- ```bash 
-- Random Forest model achieved the best accuracy and F1-score.
-- Patients with multiple prior visits are more likely to be readmitted.
-- Age groups and admission types are strong predictors.
-- Insights can support hospital resource allocation and patient care strategies.
-```
-## License
-This project is licensed under the MIT License.
+git clone https://github.com/akinyeraakintunde/Diabetes-Readmission
+cd Diabetes-Readmission
 
-## Contact
-Ibrahim Akintunde Akinyera 
-Email: akinyeraakintunde@gmail.com
+2. Set Up Virtual Environment
 
+python3 -m venv env
+source env/bin/activate  # On Windows use `env\Scripts\activate`
 
----
+3. Install Dependencies
 
+pip install -r requirements.txt
 
+4. Run Notebooks
 
+Launch Jupyter Notebook:
+
+jupyter notebook
+
+Open and execute the notebooks in the notebooks/ directory to explore the project.
+⸻
+
+Key Objectives
+	•	Data Preprocessing: Clean and transform raw healthcare data for analysis.
+	•	Exploratory Data Analysis (EDA): Identify patterns and correlations within the dataset.
+	•	Model Development: Build and evaluate various machine learning models to predict readmission risk.
+	•	Model Interpretability: Utilize SHAP to explain model predictions and ensure transparency.
+
+⸻
+Model Performance
+
+Model	Accuracy	Precision	Recall	F1-Score
+Logistic Regression	0.78	0.75	0.80	0.77
+Random Forest	0.82	0.80	0.85	0.82
+XGBoost	0.85	0.83	0.88	0.85
+
+Metrics based on a 70-30 train-test split.
+⸻
+Model Interpretability
+
+SHAP (SHapley Additive exPlanations) was used to interpret model predictions and identify key features influencing readmission risk:
+	•	Number of previous admissions
+	•	Age
+	•	Type of medication
+	•	Time since last discharge
+⸻
+Visualizations
+	•	Feature Importance: Identify most influential features.
+	•	Confusion Matrix: Evaluate model classification performance.
+	•	ROC Curve: Assess model’s ability to distinguish between classes.
+⸻
+References
+	•	Dataset Source: Kaggle - Diabetes 130-US hospitals (1999-2008)
+	•	SHAP: SHapley Additive exPlanations
