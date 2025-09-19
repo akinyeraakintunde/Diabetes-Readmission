@@ -60,7 +60,8 @@ Launch Jupyter Notebook:
 jupyter notebook
 
 Open and execute the notebooks in the notebooks/ directory to explore the project.
-⸻
+
+
 
 Key Objectives
 	•	Data Preprocessing: Clean and transform raw healthcare data for analysis.
@@ -68,7 +69,7 @@ Key Objectives
 	•	Model Development: Build and evaluate various machine learning models to predict readmission risk.
 	•	Model Interpretability: Utilize SHAP to explain model predictions and ensure transparency.
 
-⸻
+
 Model Performance
 
 Model	Accuracy	Precision	Recall	F1-Score
@@ -78,6 +79,7 @@ XGBoost	0.85	0.83	0.88	0.85
 
 Metrics based on a 70-30 train-test split.
 ⸻
+
 Model Interpretability
 
 SHAP (SHapley Additive exPlanations) was used to interpret model predictions and identify key features influencing readmission risk:
@@ -85,12 +87,14 @@ SHAP (SHapley Additive exPlanations) was used to interpret model predictions and
 	•	Age
 	•	Type of medication
 	•	Time since last discharge
-⸻
+
+
 Visualizations
 	•	Feature Importance: Identify most influential features.
 	•	Confusion Matrix: Evaluate model classification performance.
 	•	ROC Curve: Assess model’s ability to distinguish between classes.
-⸻
+
+
 References
 	•	Dataset Source: Kaggle - Diabetes 130-US hospitals (1999-2008)
 	•	SHAP: SHapley Additive exPlanations
