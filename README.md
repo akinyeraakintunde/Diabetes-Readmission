@@ -38,7 +38,8 @@ Project Structure
 ├── requirements.txt
 ├── README.md
 └── LICENSE
-⸻
+
+
 Getting Started
 
 1. Clone the Repository
