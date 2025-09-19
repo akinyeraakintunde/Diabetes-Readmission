@@ -9,6 +9,7 @@ This project leverages machine learning to predict the risk of hospital readmiss
 ⸻
 
 Technologies Used
+
 	•	Programming Language: Python
 	•	Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, XGBoost, SHAP
 	•	Tools: Jupyter Notebook, Git, GitHub Actions (for CI/CD)
@@ -16,6 +17,7 @@ Technologies Used
 ⸻
 
 Project Structure
+
 
 /diabetes-readmission
 │
@@ -64,6 +66,7 @@ Open and execute the notebooks in the notebooks/ directory to explore the projec
 
 
 Key Objectives
+
 	•	Data Preprocessing: Clean and transform raw healthcare data for analysis.
 	•	Exploratory Data Analysis (EDA): Identify patterns and correlations within the dataset.
 	•	Model Development: Build and evaluate various machine learning models to predict readmission risk.
@@ -83,6 +86,7 @@ Metrics based on a 70-30 train-test split.
 Model Interpretability
 
 SHAP (SHapley Additive exPlanations) was used to interpret model predictions and identify key features influencing readmission risk:
+
 	•	Number of previous admissions
 	•	Age
 	•	Type of medication
@@ -90,11 +94,13 @@ SHAP (SHapley Additive exPlanations) was used to interpret model predictions and
 
 
 Visualizations
+
 	•	Feature Importance: Identify most influential features.
 	•	Confusion Matrix: Evaluate model classification performance.
 	•	ROC Curve: Assess model’s ability to distinguish between classes.
 
 
 References
+
 	•	Dataset Source: Kaggle - Diabetes 130-US hospitals (1999-2008)
 	•	SHAP: SHapley Additive exPlanations
